@@ -1,202 +1,247 @@
 import { PropertyProps } from "../interfaces";
 export const BACKGROUND_IMAGE = "/images/hero-bg.jpg";
 export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
-    {
-        
-        id: "1",
-        name: "Villa Ocean Breeze",
-        address: {
-            state: "Seminyak",
-            city: "Bali",
-            country: "Indonesia"
-        },
-        rating: 4.89,
-        category: ["Luxury Villa", "Pool", "Free Parking"],
-        price: 3200,
-        offers: {
-            bed: "3",
-            shower: "3",
-            occupants: "4-6"
-        },
-        image: "https://example.com/image1.jpg",
-        discount: ""
+  {
+    id: "1",
+    name: "Villa Ocean Breeze",
+    address: {
+      state: "Seminyak",
+      city: "Bali",
+      country: "Indonesia"
     },
-    {
-        id: "2",
-        name: "Mountain Escape Chalet",
-        address: {
-            state: "Aspen",
-            city: "Colorado",
-            country: "USA"
-        },
-        rating: 4.70,
-        category: ["Mountain View", "Fireplace", "Self Checkin"],
-        price: 1800,
-        offers: {
-            bed: "4",
-            shower: "2",
-            occupants: "5-7"
-        },
-        image: "https://example.com/image2.jpg",
-        discount: "30"
+    rating: 4.89,
+    category: ["Luxury Villa", "Pool", "Free Parking"],
+    price: 3200,
+    offers: {
+      bed: "3",
+      shower: "3",
+      occupants: "4-6"
     },
-    {
-        id: "3",
-        name: "Cozy Desert Retreat",
-        address: {
-            state: "Palm Springs",
-            city: "California",
-            country: "USA"
-        },
-        rating: 4.92,
-        category: ["Desert View", "Pet Friendly", "Self Checkin"],
-        price: 1500,
-        offers: {
-            bed: "2",
-            shower: "1",
-            occupants: "2-3"
-        },
-        image: "https://example.com/image3.jpg",
-        discount: ""
+    description: "A luxurious villa with ocean views, private pool, and free parking in the heart of Seminyak, Bali.",
+    image: "https://example.com/image1.jpg",
+    discount: "",
+    reviews: [
+      {
+        avatar: "https://example.com/avatar1.jpg",
+        name: "John Doe",
+        rating: 4.5,
+        comment: "Great place!"
+      },
+      {
+        avatar: "https://example.com/avatar2.jpg",
+        name: "Jane Smith",
+        rating: 4.8,
+        comment: "Very nice place!"
+      }
+    ]
+  },
+  {
+    id: "2",
+    name: "Mountain Escape Chalet",
+    address: {
+      state: "Aspen",
+      city: "Colorado",
+      country: "USA"
     },
-    {
-        id: "4",
-        name: "City Lights Penthouse",
-        address: {
-            state: "New York",
-            city: "New York",
-            country: "USA"
-        },
-        rating: 4.85,
-        category: ["City View", "Free WiFi", "24h Checkin"],
-        price: 4500,
-        offers: {
-            bed: "2",
-            shower: "2",
-            occupants: "2-4"
-        },
-        image: "https://example.com/image4.jpg",
-        discount: "15"
+    rating: 4.70,
+    category: ["Mountain View", "Fireplace", "Self Checkin"],
+    price: 1800,
+    offers: {
+      bed: "4",
+      shower: "2",
+      occupants: "5-7"
     },
-    {
-        id: "5",
-        name: "Riverside Cabin",
-        address: {
-            state: "Queenstown",
-            city: "Otago",
-            country: "New Zealand"
-        },
-        rating: 4.77,
-        category: ["Riverside", "Private Dock", "Free Kayaks"],
-        price: 2800,
-        offers: {
-            bed: "3",
-            shower: "2",
-            occupants: "4-6"
-        },
-        image: "https://example.com/image5.jpg",
-        discount: "20"
+    description: "A cozy mountain chalet in Aspen with a fireplace and self check-in, perfect for families and groups.",
+    image: "https://example.com/image2.jpg",
+    discount: "30",
+    reviews: [
+      {
+        avatar: "https://example.com/avatar3.jpg",
+        name: "Alice Johnson",
+        rating: 4.7,
+        comment: "Amazing mountain views and cozy atmosphere!"
+      },
+      {
+        avatar: "https://example.com/avatar4.jpg",
+        name: "Bob Lee",
+        rating: 4.6,
+        comment: "Loved the fireplace and easy check-in."
+      }
+    ]
+  },
+  {
+    id: "3",
+    name: "Cozy Desert Retreat",
+    address: {
+      state: "Palm Springs",
+      city: "California",
+      country: "USA"
     },
-    {
-        id: "6",
-        name: "Modern Beachfront Villa",
-        address: {
-            state: "Sidemen",
-            city: "Bali",
-            country: "Indonesia"
-        },
-        rating: 4.95,
-        category: ["Beachfront", "Private Pool", "Chef Service"],
-        price: 5000,
-        offers: {
-            bed: "5",
-            shower: "4",
-            occupants: "8-10"
-        },
-        image: "https://example.com/image6.jpg",
-        discount: ""
+    rating: 4.92,
+    category: ["Desert View", "Pet Friendly", "Self Checkin"],
+    price: 1500,
+    offers: {
+      bed: "2",
+      shower: "1",
+      occupants: "2-3"
     },
-    {
-        id: "7",
-        name: "Lakeside Chalet",
-        address: {
-            state: "Banff",
-            city: "Alberta",
-            country: "Canada"
-        },
-        rating: 4.65,
-        category: ["Lakeside", "Mountain View", "Hiking Trails"],
-        price: 2300,
-        offers: {
-            bed: "3",
-            shower: "3",
-            occupants: "4-5"
-        },
-        image: "https://example.com/image7.jpg",
-        discount: "10"
+    description: "A peaceful desert retreat in Palm Springs, pet friendly and ideal for couples or small families.",
+    image: "https://example.com/image3.jpg",
+    discount: "",
+    reviews: []
+  },
+  {
+    id: "4",
+    name: "City Lights Penthouse",
+    address: {
+      state: "New York",
+      city: "New York",
+      country: "USA"
     },
-    {
-        id: "8",
-        name: "Tropical Garden Villa",
-        address: {
-            state: "Koh Samui",
-            city: "Surat Thani",
-            country: "Thailand"
-        },
-        rating: 4.80,
-        category: ["Garden", "Free Parking", "Self Checkin"],
-        price: 2750,
-        offers: {
-            bed: "3",
-            shower: "3",
-            occupants: "5-6"
-        },
-        image: "https://example.com/image8.jpg",
-        discount: "25"
+    rating: 4.85,
+    category: ["City View", "Free WiFi", "24h Checkin"],
+    price: 4500,
+    offers: {
+      bed: "2",
+      shower: "2",
+      occupants: "2-4"
     },
-    {
-        id: "9",
-        name: "Urban Loft",
-        address: {
-            state: "Berlin",
-            city: "Berlin",
-            country: "Germany"
-        },
-        rating: 4.60,
-        category: ["City Center", "Free WiFi", "24h Checkin"],
-        price: 2000,
-        offers: {
-            bed: "2",
-            shower: "1",
-            occupants: "2-3"
-        },
-        image: "https://example.com/image9.jpg",
-        discount: ""
+    description: "A modern penthouse in New York with stunning city views, free WiFi, and 24-hour check-in.",
+    image: "https://example.com/image4.jpg",
+    discount: "15",
+    reviews: []
+  },
+  {
+    id: "5",
+    name: "Riverside Cabin",
+    address: {
+      state: "Queenstown",
+      city: "Otago",
+      country: "New Zealand"
     },
-    {
-        id: "10",
-        name: "Secluded Forest Cabin",
-        address: {
-            state: "Whistler",
-            city: "British Columbia",
-            country: "Canada"
-        },
-        rating: 4.72,
-        category: ["Secluded", "Hot Tub", "Self Checkin"],
-        price: 2600,
-        offers: {
-            bed: "4",
-            shower: "2",
-            occupants: "5-7"
-        },
-        image: "https://example.com/image10.jpg",
-        discount: "40"
+    rating: 4.77,
+    category: ["Riverside", "Private Dock", "Free Kayaks"],
+    price: 2800,
+    offers: {
+      bed: "3",
+      shower: "2",
+      occupants: "4-6"
     },
-    {
-        id: "11",
-        name: "Cliffside Villa",
-        address: {
-            state: "Amalfi",
+    description: "A charming riverside cabin in Queenstown with a private dock and complimentary kayaks.",
+    image: "https://example.com/image5.jpg",
+    discount: "20",
+    reviews: []
+  },
+  {
+    id: "6",
+    name: "Modern Beachfront Villa",
+    address: {
+      state: "Sidemen",
+      city: "Bali",
+      country: "Indonesia"
+    },
+    rating: 4.95,
+    category: ["Beachfront", "Private Pool", "Chef Service"],
+    price: 5000,
+    offers: {
+      bed: "5",
+      shower: "4",
+      occupants: "8-10"
+    },
+    description: "A modern beachfront villa in Sidemen, Bali, featuring a private pool and chef service.",
+    image: "https://example.com/image6.jpg",
+    discount: "",
+    reviews: []
+  },
+  {
+    id: "7",
+    name: "Lakeside Chalet",
+    address: {
+      state: "Banff",
+      city: "Alberta",
+      country: "Canada"
+    },
+    rating: 4.65,
+    category: ["Lakeside", "Mountain View", "Hiking Trails"],
+    price: 2300,
+    offers: {
+      bed: "3",
+      shower: "3",
+      occupants: "4-5"
+    },
+    description: "A lakeside chalet in Banff with mountain views and direct access to hiking trails.",
+    image: "https://example.com/image7.jpg",
+    discount: "10",
+    reviews: []
+  },
+  {
+    id: "8",
+    name: "Tropical Garden Villa",
+    address: {
+      state: "Koh Samui",
+      city: "Surat Thani",
+      country: "Thailand"
+    },
+    rating: 4.80,
+    category: ["Garden", "Free Parking", "Self Checkin"],
+    price: 2750,
+    offers: {
+      bed: "3",
+      shower: "3",
+      occupants: "5-6"
+    },
+    description: "A tropical garden villa in Koh Samui with lush gardens, free parking, and self check-in.",
+    image: "https://example.com/image8.jpg",
+    discount: "25",
+    reviews: []
+  },
+  {
+    id: "9",
+    name: "Urban Loft",
+    address: {
+      state: "Berlin",
+      city: "Berlin",
+      country: "Germany"
+    },
+    rating: 4.60,
+    category: ["City Center", "Free WiFi", "24h Checkin"],
+    price: 2000,
+    offers: {
+      bed: "2",
+      shower: "1",
+      occupants: "2-3"
+    },
+    description: "A stylish urban loft in the heart of Berlin with free WiFi and 24-hour check-in.",
+    image: "https://example.com/image9.jpg",
+    discount: "",
+    reviews: []
+  },
+  {
+    id: "10",
+    name: "Secluded Forest Cabin",
+    address: {
+      state: "Whistler",
+      city: "British Columbia",
+      country: "Canada"
+    },
+    rating: 4.72,
+    category: ["Secluded", "Hot Tub", "Self Checkin"],
+    price: 2600,
+    offers: {
+      bed: "4",
+      shower: "2",
+      occupants: "5-7"
+    },
+    description: "A secluded forest cabin in Whistler with a hot tub and self check-in for ultimate privacy.",
+    image: "https://example.com/image10.jpg",
+    discount: "40",
+    reviews: []
+  },
+  {
+    id: "11",
+    name: "Cliffside Villa",
+    address: {
+      state: "Amalfi",
       city: "Salerno",
       country: "Italy"
     },
@@ -208,8 +253,10 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
       shower: "4",
       occupants: "6-8"
     },
+    description: "A stunning cliffside villa in Amalfi with an infinity pool and breathtaking sea views.",
     image: "https://example.com/image11.jpg",
-    discount: "50"
+    discount: "50",
+    reviews: []
   },
   {
     id: "12",
@@ -227,8 +274,10 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
       shower: "3",
       occupants: "4-6"
     },
+    description: "A coastal escape villa in Noosa, Australia, beachfront and pet friendly with free parking.",
     image: "https://example.com/image12.jpg",
-    discount: ""
+    discount: "",
+    reviews: []
   },
   {
     id: "13",
@@ -246,8 +295,10 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
       shower: "2",
       occupants: "2-4"
     },
+    description: "A historical villa in Florence, Tuscany, with free breakfast and self check-in.",
     image: "https://example.com/image13.jpg",
-    discount: "35"
+    discount: "35",
+    reviews: []
   },
   {
     id: "14",
@@ -265,8 +316,10 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
       shower: "1",
       occupants: "2"
     },
+    description: "A modern downtown apartment in Tokyo with easy access to public transport and free WiFi.",
     image: "https://example.com/image14.jpg",
-    discount: ""
+    discount: "",
+    reviews: []
   },
   {
     id: "15",
@@ -284,8 +337,10 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
       shower: "4",
       occupants: "6-8"
     },
+    description: "A luxury safari lodge in the Serengeti with guided tours and complimentary breakfast.",
     image: "https://example.com/image15.jpg",
-    discount: "20"
+    discount: "20",
+    reviews: []
   },
   {
     id: "16",
@@ -303,8 +358,10 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
       shower: "1",
       occupants: "2-4"
     },
+    description: "A cozy countryside cottage in the Cotswolds with a fireplace and self check-in.",
     image: "https://example.com/image16.jpg",
-    discount: "25"
+    discount: "25",
+    reviews: []
   },
   {
     id: "17",
@@ -322,8 +379,10 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
       shower: "3",
       occupants: "6-8"
     },
+    description: "A grand riverfront mansion in Paris with a private garden and self check-in.",
     image: "https://example.com/image17.jpg",
-    discount: "30"
+    discount: "30",
+    reviews: []
   },
   {
     id: "18",
@@ -341,8 +400,10 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
       shower: "3",
       occupants: "4-5"
     },
+    description: "A ski chalet in Zermatt with mountain views, ski access, and a cozy fireplace.",
     image: "https://example.com/image18.jpg",
-    discount: ""
+    discount: "",
+    reviews: []
   },
   {
     id: "19",
@@ -360,8 +421,10 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
       shower: "5",
       occupants: "8-10"
     },
+    description: "An island paradise villa in Seychelles with a private pool and chef service.",
     image: "https://example.com/image19.jpg",
-    discount: "60"
+    discount: "60",
+    reviews: []
   },
   {
     id: "20",
@@ -379,7 +442,9 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
       shower: "3",
       occupants: "4-5"
     },
+    description: "A clifftop retreat in Cape Town with ocean views, private pool, and self check-in.",
     image: "https://example.com/image20.jpg",
-    discount: ""
+    discount: "",
+    reviews: []
   }
 ];
