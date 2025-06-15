@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Brand & Logo */}
         <div className="flex flex-col space-y-2">
-          <Link href="/">
+          <Link href="/" legacyBehavior>
             <a className="flex items-center">
               <img src="/logo.png" alt="Logo" className="h-8 w-auto mr-2" />
               <span className="text-xl font-bold">YourBrand</span>
@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
           <ul className="space-y-1 text-sm">
             {accommodationTypes.map((item) => (
               <li key={item.name}>
-                <Link href={item.href}>
+                <Link href={item.href} legacyBehavior>
                   <a className="hover:text-gray-900">{item.name}</a>
                 </Link>
               </li>
@@ -45,22 +45,22 @@ const Footer: React.FC = () => {
           <h3 className="text-md font-semibold mb-2">Company</h3>
           <ul className="space-y-1 text-sm">
             <li>
-              <Link href="/about">
+              <Link href="/about" legacyBehavior>
                 <a className="hover:text-gray-900">About Us</a>
               </Link>
             </li>
             <li>
-              <Link href="/contact">
+              <Link href="/contact" legacyBehavior>
                 <a className="hover:text-gray-900">Contact</a>
               </Link>
             </li>
             <li>
-              <Link href="/privacy">
+              <Link href="/privacy" legacyBehavior>
                 <a className="hover:text-gray-900">Privacy Policy</a>
               </Link>
             </li>
             <li>
-              <Link href="/terms">
+              <Link href="/terms" legacyBehavior>
                 <a className="hover:text-gray-900">Terms of Service</a>
               </Link>
             </li>

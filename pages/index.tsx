@@ -71,7 +71,7 @@ export default function Home() {
 
         {/* ---------- LISTING SECTION ---------- */}
         <section className="py-8 bg-gray-50 w-full">
-          <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {PROPERTYLISTINGSAMPLE.map((property) => (
               <div
                 key={property.id}
