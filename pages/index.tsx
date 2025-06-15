@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useState, useMemo } from "react";
 import { Geist, Geist_Mono } from "next/font/google";
 import Pill from "@/components/common/Pill";
 import { BACKGROUND_IMAGE, PROPERTYLISTINGSAMPLE } from "@/constants";
@@ -14,30 +15,52 @@ const geistMono = Geist_Mono({
 });
 
 const filters = [
-  "Top Villa",
+  "Luxury Villa",
   "Self Check-in",
   "Pet Friendly",
-  "Pool Access",
+  "Pool",
   "Mountain View",
   "Beachfront",
+  "Free Parking",
+  "Fireplace"
 ];
 
 export default function Home() {
+  // 1) Track which filters are active
+  const [selectedFilters, setSelectedFilters] = useState<string[]>([]);
+
+  // 2) Toggle a filter on/off
+  const toggleFilter = (filter: string) => {
+    setSelectedFilters((prev) =>
+      prev.includes(filter)
+        ? prev.filter((f) => f !== filter)
+        : [...prev, filter]
+    );
+  };
+
+  // 3) Compute the filtered list: a property must include EVERY selected filter
+  const filteredProperties = useMemo(() => {
+    if (selectedFilters.length === 0) return PROPERTYLISTINGSAMPLE;
+    return PROPERTYLISTINGSAMPLE.filter((property) =>
+      selectedFilters.some((f) => property.category.includes(f))
+    );
+  }, [selectedFilters]);
+  
   return (
     <div
       className={`${geistSans.className} ${geistMono.className} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
     >
-      <main className="flex flex-col gap-[32px] row-start-2 w-full">
+      <main className="flex flex-col mt-23 gap-[32px] row-start-2 w-full">
         {/* ---------- HERO SECTION ---------- */}
         <section
-          className="h-[60vh] relative flex items-center justify-center text-center w-full"
+          className="h-[60vh] relative flex items-center justify-center text-center w-full rounded-4xl"
           style={{
             backgroundImage: `url(${BACKGROUND_IMAGE})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         >
-          <div className="absolute inset-0 bg-black opacity-40"></div>
+          <div className="absolute inset-0 bg-black opacity-40 rounded-4xl"></div>
           <div className="relative z-10 max-w-2xl px-4">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
               Find your favorite place here!
@@ -54,15 +77,13 @@ export default function Home() {
             <h2 className="text-xl font-semibold text-gray-800 mb-4">
               Filters
             </h2>
-            <div className="flex flex-wrap">
+            <div className="flex flex-wrap gap-2">
               {filters.map((label) => (
                 <Pill
                   key={label}
                   label={label}
-                  onClick={() => {
-                    // replace with real filter logic
-                    console.log(`Clicked filter: ${label}`);
-                  }}
+                  isActive={selectedFilters.includes(label)}
+                  onClick={() => toggleFilter(label)}
                 />
               ))}
             </div>
@@ -72,7 +93,7 @@ export default function Home() {
         {/* ---------- LISTING SECTION ---------- */}
         <section className="py-8 bg-gray-50 w-full">
           <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {PROPERTYLISTINGSAMPLE.map((property) => (
+            {filteredProperties.map((property) => (
               <div
                 key={property.id}
                 className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-200"
@@ -105,7 +126,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
+      {/* <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
@@ -151,7 +172,7 @@ export default function Home() {
           />
           Go to nextjs.org →
         </a>
-      </footer>
+      </footer> */}
     </div>
   );
 }

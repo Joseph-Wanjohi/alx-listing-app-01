@@ -44,7 +44,7 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
       country: "USA"
     },
     rating: 4.70,
-    category: ["Mountain View", "Fireplace", "Self Checkin"],
+    category: ["Mountain View", "Fireplace", "Self check-in"],
     price: 1800,
     offers: {
       bed: "4",
@@ -78,7 +78,7 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
       country: "USA"
     },
     rating: 4.92,
-    category: ["Desert View", "Pet Friendly", "Self Checkin"],
+    category: ["Desert View", "Pet Friendly", "Self check-in"],
     price: 1500,
     offers: {
       bed: "2",
@@ -99,7 +99,7 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
       country: "USA"
     },
     rating: 4.85,
-    category: ["City View", "Free WiFi", "24h Checkin"],
+    category: ["City View", "Free WiFi", "24h check-in"],
     price: 4500,
     offers: {
       bed: "2",
@@ -183,7 +183,7 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
       country: "Thailand"
     },
     rating: 4.80,
-    category: ["Garden", "Free Parking", "Self Checkin"],
+    category: ["Garden", "Free Parking", "Self check-in"],
     price: 2750,
     offers: {
       bed: "3",
@@ -204,7 +204,7 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
       country: "Germany"
     },
     rating: 4.60,
-    category: ["City Center", "Free WiFi", "24h Checkin"],
+    category: ["City Center", "Free WiFi", "24h check-in"],
     price: 2000,
     offers: {
       bed: "2",
@@ -225,7 +225,7 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps[] = [
       country: "Canada"
     },
     rating: 4.72,
-    category: ["Secluded", "Hot Tub", "Self Checkin"],
+    category: ["Secluded", "Hot Tub", "Self check-in"],
     price: 2600,
     offers: {
       bed: "4",

@@ -17,8 +17,7 @@ const Footer: React.FC = () => {
         <div className="flex flex-col space-y-2">
           <Link href="/" legacyBehavior>
             <a className="flex items-center">
-              <img src="/logo.png" alt="Logo" className="h-8 w-auto mr-2" />
-              <span className="text-xl font-bold">YourBrand</span>
+              <img src="/assets/logos/alx-logo.svg" alt="Logo" className="h-8 w-auto mr-2" />
             </a>
           </Link>
           <p className="text-sm">
